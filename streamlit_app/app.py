@@ -7,6 +7,11 @@ from PIL import Image
 from torchvision import models, transforms
 from ultralytics import YOLO
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR / "models"
+
 # ---------------------------
 # App Config
 # ---------------------------
@@ -22,13 +27,13 @@ device = 'cpu'
 @st.cache_resource
 def load_models():
     # Load YOLO face detector
-    face_detector = YOLO("models/yolo_face_best.pt")
+    face_detector = YOLO(str(MODEL_DIR /"yolo_face_best.pt"))
 
     # Load emotion model
     emotion_net = models.resnet18(weights=None)
     emotion_net.fc = nn.Linear(emotion_net.fc.in_features, 7)
     emotion_net.load_state_dict(
-        torch.load("models/resnet18_emotion_best.pth", map_location=device)
+        torch.load(MODEL_DIR / "resnet18_emotion_best.pth", map_location=device)
     )
     emotion_net.eval().to(device)
     face_detector.to(device)
