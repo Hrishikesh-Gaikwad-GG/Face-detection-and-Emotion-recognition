@@ -14,7 +14,7 @@ st.set_page_config(page_title="Face Emotion Recognition", layout="centered")
 st.title("🎭Face Emotion Recognition🎭")
 st.write("YOLO Face Detection + ResNet Emotion Classification")
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = 'cpu'
 
 # ---------------------------
 # Load Models (Cached)
@@ -31,7 +31,7 @@ def load_models():
         torch.load("models/resnet18_emotion_best.pth", map_location=device)
     )
     emotion_net.eval().to(device)
-
+    face_detector.to(device)
     return face_detector, emotion_net
 
 face_detector, emotion_net = load_models()
