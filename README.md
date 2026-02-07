@@ -72,9 +72,12 @@ Emotion Label + Confidence
 
 ## 🖼️ Sample Results
 
-![Sample 1](images/sample_1.jpg)
-![Sample 2](images/sample_2.jpg)
-![Sample 3](images/sample_3.jpg)
+<p align="center">
+  <img src="images/sample_1.jpg" width="32%" />
+  <img src="images/sample_2.jpg" width="32%" />
+  <img src="images/sample_3.jpg" width="32%" />
+</p>
+
 
 *Example outputs showing detected faces with predicted emotions and confidence scores.*
 
@@ -90,8 +93,8 @@ Each image shows:
 
 A Streamlit application is built to demonstrate real-time face emotion recognition on uploaded images.
 
-🔗 **Streamlit App (Coming Soon):**  
-`https://your-streamlit-app-link-here`
+🔗 **Streamlit App:**  
+https://face-detection-and-emotion-recognition.streamlit.app/
 
 The app allows users to:
 - Upload an image
