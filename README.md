@@ -95,7 +95,7 @@ Each image shows:
 A Streamlit application is built to demonstrate real-time face emotion recognition on uploaded images.
 
 🔗 **Streamlit App:**  
-https://face-detection-and-emotion-recognition.streamlit.app/
+https://face-emotion-recognition-system.streamlit.app/
 
 The app allows users to:
 - Upload an image
