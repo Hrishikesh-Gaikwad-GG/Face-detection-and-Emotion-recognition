@@ -18,6 +18,7 @@ The project emphasizes **modular design, transfer learning, and system-level eva
 
 ## 🧠 Pipeline Architecture
 
+```markdown
 Input Image
 ↓
 YOLO Face Detector
@@ -29,7 +30,7 @@ Face Cropping & Preprocessing
 ResNet Emotion Classifier
 ↓
 Emotion Label + Confidence
-
+```
 
 ---
 
